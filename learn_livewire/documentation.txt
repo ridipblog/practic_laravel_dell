@@ -1,0 +1,9 @@
+1.Counter.php->
+    a.countter application simple incress and decress value
+2.popup Folder ->
+    a.simple show and hide a popup using nested component .
+    b.send parameter in bind method from frontend component to back-end component.
+3.emit_listener folder ->
+    a.emit and listen event on component .
+    b. emit event from componet and listen on js code .
+
