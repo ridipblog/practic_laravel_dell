@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TakePhotoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 // ----------------- lazy loading -------------------
 require __DIR__ .'/lazy_loading/lazy_loading.php';
+
+// ---------------- take photo ------------------
+
+require __DIR__ .'/take_photo/take_photo.php';
+
+// -------------- cron job test -----------------
+Route::get('/cron-test',[TakePhotoController::class,'cronTest']);
