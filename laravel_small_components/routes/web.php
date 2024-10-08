@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\generate_pdfs\GeneratePdfController;
 use App\Http\Controllers\TakePhotoController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ require __DIR__ .'/take_photo/take_photo.php';
 
 // -------------- cron job test -----------------
 Route::get('/cron-test',[TakePhotoController::class,'cronTest']);
+// ----------------- generate pdf --------------
+Route::get('/get-pdf',[GeneratePdfController::class,'generatePDF']);
