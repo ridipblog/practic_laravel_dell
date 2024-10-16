@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DispatchJobController;
 use App\Http\Controllers\generate_pdfs\GeneratePdfController;
 use App\Http\Controllers\TakePhotoController;
 use Illuminate\Support\Facades\Route;
@@ -26,3 +27,7 @@ require __DIR__ .'/take_photo/take_photo.php';
 Route::get('/cron-test',[TakePhotoController::class,'cronTest']);
 // ----------------- generate pdf --------------
 Route::get('/get-pdf',[GeneratePdfController::class,'generatePDF']);
+
+// -------------- dispatc and job ----------------
+Route::get('/send-job-emails',[DispatchJobController::class,'index']);
+Route::get('/send--interface-job-emails',[DispatchJobController::class,'byInterface']);
