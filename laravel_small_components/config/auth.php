@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\spaties\UserSpatiesModel;
+
 return [
 
     /*
@@ -40,6 +42,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'spaties_guard'=>[
+            'driver' => 'session',
+            'provider' => 'user_spaties',
+        ]
     ],
 
     /*
@@ -64,7 +70,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
+        'user_spaties' => [
+            'driver' => 'eloquent',
+            'model' => UserSpatiesModel::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
