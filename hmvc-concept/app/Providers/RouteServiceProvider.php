@@ -33,6 +33,18 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+// --------------- boot routes for blog module ---------------
+                Route::middleware('web')
+                ->prefix('/blog')
+                ->namespace('App\Modules\Blog\Controllers')
+                ->group('App/Modules/Blog/Routes/routes.php');
+
+                // ------------------ boot routes for buy module----------------
+                Route::middleware('web')
+                ->prefix('/buy')
+                ->namespace('App\Modules\Buy\Controllers')
+                ->group('App/Modules/Buy/Routes/routes.php');
+
         });
     }
 

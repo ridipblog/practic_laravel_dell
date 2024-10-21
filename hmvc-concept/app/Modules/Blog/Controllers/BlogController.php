@@ -6,5 +6,7 @@ use App\Http\Controllers\Controller;
 
 class BlogController extends Controller
 {
-    public function index() {}
+    public function index() {
+        return view('Blog::index');
+    }
 }

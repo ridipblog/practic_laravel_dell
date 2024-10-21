@@ -41,10 +41,11 @@ class MakeModuleController extends Command
                     $namespaces .= '\\' . $names[$i];
                 }
             }
-            $class_name=end($names);
-                        File::put($path, "<?php namespace App\Modules\\$module\Controllers$namespaces;
+            $class_name = end($names);
+            File::put($path, "<?php namespace App\Modules\\$module\Controllers$namespaces;
             use App\Http\Controllers\Controller;
             class $class_name extends Controller { public function index() {  } }");
+            $this->info("Controller created at $path");
         } else {
             echo "Controller is already exists !";
         }
