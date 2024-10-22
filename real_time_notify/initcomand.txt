@@ -1,0 +1,8 @@
+composer require beyondcode/laravel-websockets:^1.14 --with-all-dependencies
+
+
+IF YOU USED VITE THEN SIMPLE RUN NPM RUN BUILD WITH VITE.CONFIG.JS
+        //"dev": "vite",
+        // "build": "vite build"
+
+IF YOU USED MIX THEN INSTALL MIX AFTER CREATE WEBPACK.MIX.JS FILE CONFIGURE AND NPM RUN BUILD
