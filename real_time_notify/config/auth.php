@@ -18,6 +18,8 @@ return [
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
+        // 'guard' => 'user_guard',
+        // 'passwords' => 'user_provider',
     ],
 
     /*
@@ -42,6 +44,18 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
+        'user_guard'=>[
+            'driver'=>'session',
+            'provider'=>'user_provider'
+        ],
+        'user_guard_api'=>[
+            'driver'=>'passport',
+            'provider'=>'user_provider'
+        ]
     ],
 
     /*
@@ -64,9 +78,13 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            // 'model' => App\Models\User::class,
-            'model' => UserCredentialsModel::class,
+            'model' => App\Models\User::class,
+            // 'model' => UserCredentialsModel::class,
         ],
+        'user_provider'=>[
+            'driver' => 'eloquent',
+            'model' => UserCredentialsModel::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',

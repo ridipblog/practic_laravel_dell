@@ -25,5 +25,6 @@ Route::get('/notifications',[SendNotificationController::class,'index']);
 Route::get('/register',[UserAuthController::class,'registerAPI']);
 Route::get('/login',[UserAuthController::class,'loginAPI']);
 Route::get('user-dash',[UserAuthController::class,'userDashboard']);
+Route::get('/socket-dash',[UserAuthController::class,'socketDash']);
 Route::get('/send-info',[UserAuthController::class,'sendInfo']);
 Route::get('/logout',[UserAuthController::class,'logout']);
