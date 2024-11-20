@@ -1,0 +1,7 @@
+---------------------Service Container and Service Providers-----------------
+1.make commnad to create a new own service ->
+    php artisan make:commnad MakeServiceCommand
+2. make a new service ->
+    php artisan app:make-service LoggedService
+3. make a new service provider ->
+    php artisan make:provider LoggedServiceProvider

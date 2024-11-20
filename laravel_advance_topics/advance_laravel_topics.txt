@@ -1,0 +1,84 @@
+1. Service Container and Service Providers
+Understanding dependency injection and how to bind classes/interfaces to the Laravel service container.
+Creating and registering custom service providers.
+2. Event Broadcasting
+Real-time applications using Laravel Echo, Pusher, or WebSockets.
+Broadcasting events to client-side listeners for features like notifications and live updates.
+3. Queues and Jobs
+Setting up and managing queues for tasks that require delayed or asynchronous processing (e.g., sending emails, processing data).
+Queue prioritization and managing workers.
+4. Task Scheduling
+Automating recurring tasks using the task scheduler, managed in app/Console/Kernel.php.
+Running background jobs on specific schedules (cron jobs) within the Laravel environment.
+5. Custom Authentication Guards
+Implementing custom guards to support multiple user types or multiple authentication mechanisms (e.g., API tokens, JWT, Passport).
+6. Authorization Policies and Gates
+Implementing complex access control using policies and gates.
+Defining authorization logic for resources and securing routes based on user roles and permissions.
+7. Repository Pattern
+Implementing repositories to abstract data persistence and make code more testable and maintainable.
+Useful for handling complex data queries or multiple data sources.
+8. Eloquent ORM Advanced Features
+Eloquent events, mutators/accessors, model observers.
+Using advanced query methods like withCount, subqueries, and relationships within relationships.
+9. Caching Strategies
+Leveraging cache drivers (e.g., Redis, Memcached) to store data and improve application performance.
+Using query caching, cache tags, and custom cache invalidation strategies.
+10. Laravel Broadcasting with WebSockets
+Setting up real-time functionality using WebSockets and Laravel Echo.
+Implementing one-to-one or group chat systems, live notifications, or dashboards.
+11. Advanced Query Techniques
+Using when conditions, advanced joins, complex groupings, and aggregations.
+Leveraging raw SQL queries, complex filters, and optimized eager loading for large datasets.
+12. API Development with Laravel Passport or Sanctum
+Building secure APIs using OAuth2 with Passport or personal access tokens with Sanctum.
+Managing scopes, access tokens, and authentication for SPA and mobile applications.
+13. Custom Blade Directives and Components
+Writing custom Blade directives to simplify reusable logic in views.
+Using Blade components for building modular, reusable UI elements.
+14. Service Layer / Action Classes
+Structuring business logic in service or action classes to keep controllers slim and organized.
+Facilitates code reuse and maintains a separation of concerns.
+15. Testing (Unit, Feature, and Dusk Testing)
+Writing unit and feature tests to ensure code reliability.
+Using Laravel Dusk for end-to-end testing of browser interactions in applications.
+16. Package Development
+Creating reusable Laravel packages to share code across multiple applications.
+Publishing config files, migrations, and assets, and handling versioning.
+17. Observer Pattern
+Using model observers to listen to model events and trigger actions, such as logging or email notifications.
+18. Job Batching and Chaining
+Managing complex workflows by batching or chaining jobs to execute them in a specific sequence.
+Handling success/failure for dependent jobs and managing batch outcomes.
+19. Multi-Tenancy
+Implementing multi-tenant architectures to support multiple clients or organizations with shared or isolated databases.
+Techniques like database per tenant, schema per tenant, and tenant-based configuration.
+20. Advanced Middleware
+Creating complex middleware for cross-cutting concerns like logging, authentication, and throttling.
+21. Data Seeding and Factories with Faker
+Using factories and seeders to quickly populate databases with realistic test data.
+Customizing seeders and factories for various environments.
+22. Using Traits for Code Reusability
+Organizing reusable code logic in traits and incorporating them in multiple models or classes.
+23. File Storage and Uploads with Laravel Storage
+Advanced file management using Laravel’s filesystem for local, cloud, and hybrid storage.
+Handling large file uploads, optimizing storage, and providing secure file access.
+24. Custom Console Commands and Artisan Extensions
+Creating custom Artisan commands to automate tasks or build developer utilities.
+Using Artisan’s scheduling, logging, and feedback methods.
+25. Localization and Internationalization
+Making applications multilingual by using Laravel’s localization features.
+Managing language files, dynamically selecting languages, and formatting data based on locale.
+26. Advanced Validation Rules and Custom Validation Logic
+Creating custom validation rules and form request classes for complex input validation.
+27. Soft Deletes and Query Scopes
+Using soft deletes for data that needs to be "deleted" but remains in the database.
+Defining global and local query scopes for recurring query conditions.
+28. Refactoring for Domain-Driven Design (DDD)
+Organizing code into domains (contexts) to reflect business logic, enabling scalability and maintainability.
+29. Logging and Monitoring with Laravel Telescope
+Using Laravel Telescope for in-depth monitoring of requests, jobs, exceptions, and more.
+Analyzing application performance and errors in real-time.
+30. Using Docker with Laravel
+Containerizing Laravel applications for consistent environments across development, staging, and production.
+Setting up Docker for complex applications with multiple services (e.g., Redis, MySQL, Nginx).

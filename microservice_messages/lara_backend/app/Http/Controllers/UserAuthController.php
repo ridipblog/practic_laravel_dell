@@ -15,7 +15,14 @@ class UserAuthController extends Controller
             'email' => "coder1@gmail.com",
             'password' => Hash::make('password'),
         ]);
-        $token = $user->createToken('MyApp')->accessToken;
-        return response()->json(['token' => $token]);
+    }
+    public function login(Request $request){
+        $user_data=UserCredentialsModel::where('email','coder1@gmail.com')->first();
+        if($user_data){
+            $token=$user_data->createToken('RequestAuthToken')->accessToken;
+            return $token;
+        }else{
+            dd("data not found !");
+        }
     }
 }
