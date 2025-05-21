@@ -1,0 +1,2 @@
+1. if you are used jwtAuth then you should implement JWTSubject in authencable model.
+2. and also change default groud to api

@@ -12,7 +12,7 @@ class UserAuthController extends Controller
     {
 
         $user = UserCredentialsModel::create([
-            'email' => "coder1@gmail.com",
+            'email' => "coder2@gmail.com",
             'password' => Hash::make('password'),
         ]);
     }
@@ -25,4 +25,5 @@ class UserAuthController extends Controller
             dd("data not found !");
         }
     }
+
 }

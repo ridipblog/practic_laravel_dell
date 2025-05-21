@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\JWTProtectApiMiddleware;
+use App\Http\Middleware\PassportProtectAPIMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -43,6 +45,12 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'passport_protect_api'=>[
+            PassportProtectAPIMiddleware::class
+        ],
+        'jwt_protect_api'=>[
+            JWTProtectApiMiddleware::class
+        ]
     ];
 
     /**
