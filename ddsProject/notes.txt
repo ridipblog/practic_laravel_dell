@@ -1,0 +1,4 @@
+1. MAKE COMMAND ->
+    a. php artisan make:command MakeDomain
+2. CREATE DOMAIN WITH COMMAND ->
+    a. php artisan make:domain Admin
