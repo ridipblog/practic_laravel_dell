@@ -27,11 +27,24 @@ class MakeDomainController extends Command
     public function handle()
     {
         $domain = ucfirst($this->argument('domain'));
-        $controller = ucfirst($this->argument('controller'));
+        $controllerInput = $this->argument('controller');
 
-        $directoryPath = app_path("Domains/{$domain}/Http/Controllers");
-        $filePath = "{$directoryPath}/{$controller}.php";
-        // Create directory if not exists
+        $controllerInput = str_replace('\\', '/', $controllerInput);
+
+        $controllerName = basename($controllerInput);
+
+        $subPath = dirname($controllerInput) !== '.'
+            ? dirname($controllerInput)
+            : '';
+
+        $basePath = app_path("Domains/{$domain}/Http/Controllers");
+
+        $directoryPath = $subPath
+            ? $basePath . '/' . $subPath
+            : $basePath;
+
+        $filePath = $directoryPath . '/' . ucfirst($controllerName) . '.php';
+
         if (!File::exists($directoryPath)) {
             File::makeDirectory($directoryPath, 0755, true);
         }
@@ -49,7 +62,7 @@ namespace App\\Domains\\{$domain}\\Http\\Controllers;
 
 use App\\Http\\Controllers\\Controller;
 
-class {$controller} extends Controller
+class {$controllerName} extends Controller
 {
     public function index()
     {
@@ -61,6 +74,6 @@ class {$controller} extends Controller
         // Create file with content
         File::put($filePath, $content);
 
-        $this->info("Controller {$controller} created successfully in Domain {$domain}.");
+        $this->info("Controller {$controllerName} created successfully in Domain {$domain}.");
     }
 }
