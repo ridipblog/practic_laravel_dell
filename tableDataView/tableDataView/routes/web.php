@@ -6,4 +6,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/data', [viewDataController::class, 'index']);
+Route::match(['get', 'post'], '/data', [viewDataController::class, 'index']);

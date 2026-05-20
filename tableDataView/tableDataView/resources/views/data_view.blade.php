@@ -75,7 +75,9 @@
 
                 $.ajax({
                     url: "/data",
+                    type: "POST",
                     data: {
+                        _token: '{{ csrf_token() }}',
                         page: page,
                         name: name,
                         city: city,
